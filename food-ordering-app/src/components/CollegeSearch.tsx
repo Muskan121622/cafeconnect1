@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 import axios from 'axios';
 import { motion } from 'framer-motion';
@@ -30,7 +30,7 @@ const CollegeSearch: React.FC = () => {
     
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:5000/api/cafes/search/${searchTerm}`);
+      const response = await axios.get(`https://cafeconnect1-6.onrender.com/api/cafes/search/${searchTerm}`);
       setCafes(response.data);
       
       if (response.data.length > 0) {
