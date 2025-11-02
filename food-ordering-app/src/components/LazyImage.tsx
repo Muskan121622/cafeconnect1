@@ -5,10 +5,9 @@ interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
-  placeholder?: string;
 }
 
-const LazyImage = ({ src, alt, className = '', placeholder }: LazyImageProps) => {
+const LazyImage = ({ src, alt, className = '' }: LazyImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);

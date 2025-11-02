@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, memo, useCallback } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import { FaShoppingCart } from 'react-icons/fa';
-import burgerImg from '../assets/burger.png';
+
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
